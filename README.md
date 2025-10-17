@@ -5,21 +5,22 @@ Trabalho de Algoritmos e Estruturas de Dados - Implementação de Sistema de Nav
 ## 📋 Descrição
 
 Este projeto implementa um sistema de navegação tipo Waze simplificado, onde é possível:
+
 - Criar e editar mapas de cidades com um editor visual
 - Definir construções (casas, prédios, praças) e ruas
-- Calcular a melhor rota entre dois pontos usando algoritmo A*
+- Calcular a melhor rota entre dois pontos usando algoritmo A\*
 - Simular engarrafamentos aleatórios que afetam as rotas
 - Salvar e carregar mapas diferentes
 
 ## 🎯 Requisitos Atendidos
 
 ✅ Utilização de **arrays clássicos** (acesso apenas por índice, sem métodos avançados)  
-✅ Implementação manual de algoritmos de busca (A*)  
+✅ Implementação manual de algoritmos de busca (A\*)  
 ✅ Movimentação e manipulação de elementos nos arrays  
 ✅ Interface gráfica apropriada com visualização em tempo real  
 ✅ Orientação a objetos adequada  
 ✅ Sistema de salvamento/carregamento de mapas  
-✅ Mapas pré-configurados para apresentação  
+✅ Mapas pré-configurados para apresentação
 
 ## 🛠️ Tecnologias
 
@@ -29,27 +30,33 @@ Este projeto implementa um sistema de navegação tipo Waze simplificado, onde �
 ## 📦 Instalação
 
 ### 1. Instalar Python
+
 Certifique-se de ter Python 3.8 ou superior instalado:
+
 ```bash
 python --version
 ```
 
 ### 2. Instalar Dependências
+
 ```bash
 pip install -r requirements.txt
 ```
 
 Ou manualmente:
+
 ```bash
 pip install pygame
 ```
 
 ### 3. Criar Mapas de Exemplo
+
 ```bash
 python create_sample_maps.py
 ```
 
 Isso criará três mapas de exemplo na pasta `maps/`:
+
 - `cidade_pequena.json` - Cidade pequena organizada
 - `cidade_grande.json` - Cidade grande com muitas ruas
 - `cidade_labirinto.json` - Cidade com layout complexo
@@ -57,11 +64,13 @@ Isso criará três mapas de exemplo na pasta `maps/`:
 ## 🚀 Como Executar
 
 ### Versão Básica (com cores)
+
 ```bash
 python main.py
 ```
 
 ### Versão com Imagens (recomendado)
+
 ```bash
 # Primeiro, crie as imagens de exemplo:
 python create_sample_images.py
@@ -77,13 +86,15 @@ python main_with_images.py
 ### Modo Edição
 
 1. **Selecionar Ferramenta**: Clique nos botões no topo para escolher o tipo de elemento:
+
    - **Rua** - Caminhos por onde o carro pode passar (cinza escuro)
    - **Casa** - Construção residencial (marrom)
    - **Prédio** - Construção comercial (azul claro)
    - **Praça** - Área verde (verde)
    - **Apagar** - Remove elementos
 
-2. **Desenhar no Mapa**: 
+2. **Desenhar no Mapa**:
+
    - Clique e arraste no grid para desenhar
    - Cada quadrado representa um espaço na cidade
 
@@ -97,11 +108,13 @@ python main_with_images.py
 1. **Alternar Modo**: Clique em **"Modo: Editar"** para mudar para **"Modo: Navegar"**
 
 2. **Definir Rota**:
+
    - **Primeiro clique** (em uma rua): Define o ponto de partida (marcador verde "A")
    - **Segundo clique** (em uma rua): Define o destino (marcador azul "B")
    - O caminho é calculado automaticamente e mostrado em amarelo
 
 3. **Simular Tráfego**:
+
    - **Gerar Tráfego**: Cria engarrafamentos aleatórios (células vermelhas)
    - **Limpar Tráfego**: Remove todos os engarrafamentos
    - A rota é recalculada automaticamente evitando o tráfego
@@ -112,11 +125,13 @@ python main_with_images.py
 
 ### Dicas de Uso
 
-- **Para testar mapas de exemplo**: 
+- **Para testar mapas de exemplo**:
+
   1. Renomeie um dos mapas exemplo para `cidade.json`
   2. Clique em "Carregar" na aplicação
-  
+
   Por exemplo no terminal:
+
   ```bash
   copy maps\cidade_pequena.json maps\cidade.json
   ```
@@ -149,7 +164,7 @@ Waze Particular/
 │   └── cidade_labirinto.json
 │
 └── assets/                   # Imagens dos elementos
-    ├── street.png
+    ├── rua.png
     ├── casa.png
     ├── predio.png
     ├── praca.png
@@ -159,22 +174,26 @@ Waze Particular/
 ## 🎓 Conceitos de Algoritmos Implementados
 
 ### 1. Arrays Clássicos
+
 - Uso exclusivo de acesso por índice (`array[i]`, `array[i][j]`)
 - Manipulação manual de elementos
 - Implementação própria de buscas e iterações
 
-### 2. Algoritmo A* (A-Star)
+### 2. Algoritmo A\* (A-Star)
+
 - Pathfinding eficiente que encontra o caminho mais curto
 - Usa heurística de distância Manhattan
 - Implementado completamente com arrays clássicos
 - Evita obstáculos e considera penalidades de tráfego
 
 ### 3. Estruturas de Dados
+
 - **Grid Bidimensional**: Array de arrays representando o mapa
 - **Listas de Posições**: Arrays para armazenar coordenadas
 - **"Dicionários" Manuais**: Arrays de pares [chave, valor]
 
 ### 4. Orientação a Objetos
+
 - **City**: Encapsula lógica do mapa
 - **PathFinder**: Encapsula algoritmo de busca
 - **Button**: Componente reutilizável de UI
@@ -185,38 +204,42 @@ Waze Particular/
 ### Representação Visual
 
 #### Versão com Imagens (`main_with_images.py`)
+
 Usa imagens reais (PNG/JPG) da pasta `assets/`:
+
 - 🏠 `casa.png` - Casa residencial
 - 🏢 `predio.png` - Prédio comercial
-- 🛣️ `street.png` - Rua (asfalto com linha amarela)
+- 🛣️ `rua.png` - Rua (asfalto com linha amarela)
 - 🌳 `praca.png` - Praça/parque
 - 🚫 `trafego.png` - Engarrafamento
 
 #### Versão com Cores (`main.py`)
 
-| Cor | Elemento |
-|-----|----------|
-| Cinza Claro | Espaço vazio |
-| Cinza Escuro | Rua (transitável) |
-| Marrom | Casa |
-| Azul Claro | Prédio |
-| Verde | Praça |
-| Vermelho | Engarrafamento |
-| Amarelo | Caminho calculado |
-| Verde com "A" | Ponto de partida |
-| Azul com "B" | Ponto de chegada |
+| Cor           | Elemento          |
+| ------------- | ----------------- |
+| Cinza Claro   | Espaço vazio      |
+| Cinza Escuro  | Rua (transitável) |
+| Marrom        | Casa              |
+| Azul Claro    | Prédio            |
+| Verde         | Praça             |
+| Vermelho      | Engarrafamento    |
+| Amarelo       | Caminho calculado |
+| Verde com "A" | Ponto de partida  |
+| Azul com "B"  | Ponto de chegada  |
 
 ## 📝 Observações Importantes para Avaliação
 
 1. **Arrays Clássicos**: O código usa APENAS acesso por índice. Não usa métodos avançados como `append()` exceto para adicionar elementos (equivalente a aumentar o tamanho do array).
 
 2. **Implementação Manual**: Todas as buscas, ordenações e manipulações foram implementadas manualmente:
-   - Busca do menor valor em lista (para A*)
+
+   - Busca do menor valor em lista (para A\*)
    - Remoção de elementos de arrays
    - Verificação de presença em listas
    - Reconstrução de caminho
 
 3. **Interface Gráfica**: Visualização completa e intuitiva que mostra:
+
    - O mapa da cidade
    - Obstáculos e ruas
    - Caminho calculado em tempo real
@@ -239,4 +262,3 @@ Trabalho de Algoritmos e Estruturas de Dados
 ## 📄 Licença
 
 Projeto acadêmico - Uso educacional
-

@@ -7,7 +7,7 @@ Este guia explica como usar imagens personalizadas no sistema de navegação.
 ```
 Waze Particular/
 ├── assets/              ← Pasta para suas imagens
-│   ├── street.png
+│   ├── rua.png
 │   ├── casa.png
 │   ├── predio.png
 │   ├── praca.png
@@ -38,7 +38,7 @@ Isso criará automaticamente 5 imagens na pasta `assets/`.
 2. **Coloque suas imagens** na pasta `assets/` com estes nomes EXATOS:
    - `casa.png` ou `casa.jpg` - Imagem de uma casa
    - `predio.png` ou `predio.jpg` - Imagem de um prédio
-   - `street.png` ou `rua.jpg` - Imagem de uma rua
+   - `rua.png` ou `rua.jpg` - Imagem de uma rua
    - `praca.png` ou `praca.jpg` - Imagem de uma praça/parque
    - `trafego.png` ou `trafego.jpg` - Imagem de tráfego/engarrafamento
 
@@ -63,7 +63,7 @@ Isso criará automaticamente 5 imagens na pasta `assets/`.
 
 | Arquivo | Representa | Descrição |
 |---------|-----------|-----------|
-| `street.png` | Rua | Caminho por onde o carro passa (cinza com linha amarela) |
+| `rua.png` | Rua | Caminho por onde o carro passa (cinza com linha amarela) |
 | `casa.png` | Casa | Construção residencial (casa pequena) |
 | `predio.png` | Prédio | Construção comercial (prédio alto) |
 | `praca.png` | Praça | Área verde/parque (árvores, grama) |
@@ -129,7 +129,7 @@ python main_with_images.py
 # Baixe imagens da internet e salve como:
 # assets/casa.png
 # assets/predio.png
-# assets/street.png
+# assets/rua.png
 # assets/praca.png
 # assets/trafego.png
 
@@ -184,7 +184,7 @@ STATUS DAS IMAGENS
 ## 📝 Checklist
 
 - [ ] Pasta `assets/` criada
-- [ ] Imagem `street.png` adicionada (ou gerada)
+- [ ] Imagem `rua.png` adicionada (ou gerada)
 - [ ] Imagem `casa.png` adicionada (ou gerada)
 - [ ] Imagem `predio.png` adicionada (ou gerada)
 - [ ] Imagem `praca.png` adicionada (ou gerada)

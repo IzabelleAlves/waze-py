@@ -63,7 +63,7 @@ Sistema de navegação tipo Waze usando **arrays clássicos** e **algoritmo A***
 #### `create_sample_images.py`
 - **O que faz**: Cria imagens de exemplo (40x40 pixels)
 - **Imagens criadas**:
-  - `street.png` - Asfalto com linha amarela
+  - `rua.png` - Asfalto com linha amarela
   - `casa.png` - Casa com telhado
   - `predio.png` - Prédio com janelas
   - `praca.png` - Parque com árvores
@@ -149,7 +149,7 @@ Waze Particular/
 │   └── cidade_labirinto.json
 │   │
 └── 📁 assets/                    # Imagens (gerado)
-    ├── street.png
+    ├── rua.png
     ├── casa.png
     ├── predio.png
     ├── praca.png
