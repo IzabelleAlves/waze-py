@@ -1,0 +1,132 @@
+================================================================================
+  SISTEMA DE NAVEGACAO - WAZE PARTICULAR
+  Trabalho de Algoritmos e Estruturas de Dados
+================================================================================
+
+COMECE AQUI!
+
+1. INSTALACAO RAPIDA
+   -----------------
+   
+   a) Instale o Pygame:
+      pip install pygame
+   
+   b) Crie os mapas de exemplo:
+      python create_sample_maps.py
+   
+   c) Crie as imagens de exemplo:
+      python create_sample_images.py
+
+
+2. EXECUTE A APLICACAO
+   -------------------
+   
+   VERSAO RECOMENDADA (com imagens):
+      python main_with_images.py
+   
+   OU versao simples (com cores):
+      python main.py
+
+
+3. COMO USAR
+   ---------
+   
+   MODO EDICAO:
+   - Selecione ferramenta (Rua, Casa, Predio, Praca)
+   - Clique/arraste no grid para desenhar
+   - Clique "Salvar" para salvar o mapa
+   
+   MODO NAVEGACAO:
+   - Clique "Modo: Editar" para mudar para "Modo: Navegar"
+   - Clique em uma RUA para definir ponto A (partida)
+   - Clique em outra RUA para definir ponto B (chegada)
+   - Veja o caminho calculado em amarelo!
+   - Clique "Gerar Trafego" para adicionar engarrafamentos
+   - Veja a rota mudar automaticamente!
+
+
+4. ARQUIVOS IMPORTANTES
+   --------------------
+   
+   PARA COMECAR:
+   - GUIA_RAPIDO.md          <- Guia de inicio rapido
+   - README.md               <- Documentacao completa
+   
+   PARA ENTENDER O CODIGO:
+   - EXPLICACAO_ALGORITMOS.md <- Teoria e algoritmos
+   - RESUMO_PROJETO.md       <- Visao geral do projeto
+   
+   PARA CUSTOMIZAR:
+   - GUIA_IMAGENS.md         <- Como usar suas proprias imagens
+
+
+5. ESTRUTURA DO PROJETO
+   --------------------
+   
+   city.py                   <- Classe da cidade (array bidimensional)
+   pathfinding.py            <- Algoritmo A* (busca de caminho)
+   main_with_images.py       <- Aplicacao com imagens (RECOMENDADO)
+   main.py                   <- Aplicacao com cores
+   
+   maps/                     <- Mapas salvos
+   assets/                   <- Imagens (casa.png, predio.png, etc.)
+
+
+6. SOLUCAO DE PROBLEMAS
+   --------------------
+   
+   Erro: "pygame nao encontrado"
+   Solucao: pip install pygame
+   
+   Erro: "Nenhum caminho encontrado"
+   Causa: Pontos A e B nao estao conectados por ruas
+   Solucao: Certifique-se de clicar apenas em RUAS (cinza escuro)
+   
+   Imagens nao aparecem:
+   Solucao: Execute "python create_sample_images.py"
+
+
+7. PARA APRESENTACAO
+   -----------------
+   
+   a) Execute os scripts de criacao:
+      python create_sample_maps.py
+      python create_sample_images.py
+   
+   b) Copie um mapa para cidade.json:
+      Windows: copy maps\cidade_pequena.json maps\cidade.json
+      Linux/Mac: cp maps/cidade_pequena.json maps/cidade.json
+   
+   c) Execute a aplicacao:
+      python main_with_images.py
+   
+   d) Demonstre:
+      - Carregar mapa (botao "Carregar")
+      - Definir rota A -> B
+      - Gerar trafego
+      - Ver rota alternativa
+
+
+8. RECURSOS ADICIONAIS
+   -------------------
+   
+   Website Pygame: https://www.pygame.org
+   Python: https://www.python.org
+   
+   Sites de icones gratuitos:
+   - Flaticon: https://www.flaticon.com
+   - Icons8: https://icons8.com
+
+
+================================================================================
+
+DUVIDAS? Leia:
+  - GUIA_RAPIDO.md (para uso basico)
+  - README.md (documentacao completa)
+  - EXPLICACAO_ALGORITMOS.md (teoria dos algoritmos)
+
+BOA SORTE NA APRESENTACAO!
+
+================================================================================
+
+
