@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Sistema de Navegação tipo Waze - Versão com Imagens
-Trabalho de Algoritmos e Estruturas de Dados
-"""
-
 import pygame
 import sys
 import os
@@ -38,22 +32,14 @@ COLOR_BUTTON_HOVER = (100, 160, 210)
 COLOR_YELLOW = (255, 255, 0)
 
 class Message:
-    """Classe para mensagens temporárias na tela"""
     
     def __init__(self, text, duration=3000, msg_type="info"):
-        """
-        Inicializa uma mensagem
-        :param text: Texto da mensagem
-        :param duration: Duração em milissegundos
-        :param msg_type: Tipo da mensagem (info, success, error, warning)
-        """
         self.text = text
         self.duration = duration
         self.start_time = pygame.time.get_ticks()
         self.msg_type = msg_type
         self.active = True
-        
-        # Cores por tipo de mensagem
+
         if msg_type == "success":
             self.bg_color = (46, 125, 50)  # Verde
             self.text_color = COLOR_WHITE
@@ -63,7 +49,7 @@ class Message:
         elif msg_type == "warning":
             self.bg_color = (255, 152, 0)  # Laranja
             self.text_color = COLOR_BLACK
-        else:  # info
+        else: 
             self.bg_color = (33, 150, 243)  # Azul
             self.text_color = COLOR_WHITE
     
@@ -126,7 +112,6 @@ class Message:
         screen.blit(text_surface, (popup_x + padding, popup_y + padding // 2))
 
 class ImageLoader:
-    """Classe para carregar e gerenciar imagens"""
     
     def __init__(self, cell_size):
         """Inicializa o carregador de imagens"""
@@ -177,7 +162,6 @@ class ImageLoader:
         return cell_type in self.images and self.images[cell_type] is not None
 
 class Button:
-    """Classe para botões da interface"""
     
     def __init__(self, x, y, width, height, text, color=COLOR_BUTTON):
         self.rect = pygame.Rect(x, y, width, height)
@@ -206,7 +190,6 @@ class Button:
         return False
 
 class WazeApp:
-    """Aplicação principal"""
     
     def __init__(self):
         """Inicializa a aplicação"""
@@ -223,7 +206,7 @@ class WazeApp:
         self.city = City(GRID_WIDTH, GRID_HEIGHT, "Minha Cidade")
         self.pathfinder = PathFinder(self.city)
         self.current_tool = City.STREET
-        self.mode = "EDIT"  # EDIT ou NAVIGATE
+        self.mode = "EDIT" 
         
         # Navegação
         self.start_pos = None
@@ -700,7 +683,6 @@ class WazeApp:
         sys.exit()
 
 def main():
-    """Função principal"""
     app = WazeApp()
     app.run()
 

@@ -7,7 +7,6 @@ from city import City
 import os
 
 def create_small_city():
-    """Cria uma cidade pequena de exemplo"""
     city = City(20, 15, "Cidade Pequena")
     
     # Cria ruas horizontais
@@ -79,10 +78,8 @@ def create_small_city():
     return city
 
 def create_big_city():
-    """Cria uma cidade grande de exemplo"""
     city = City(20, 15, "Cidade Grande")
-    
-    # Grid de ruas mais denso
+
     # Ruas horizontais
     for x in range(20):
         city.set_cell(x, 2, City.STREET)
@@ -128,10 +125,8 @@ def create_big_city():
     return city
 
 def create_maze_city():
-    """Cria uma cidade com layout de labirinto"""
     city = City(20, 15, "Cidade Labirinto")
     
-    # Cria padrão de labirinto
     # Bordas
     for x in range(20):
         city.set_cell(x, 0, City.STREET)

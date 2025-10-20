@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Script para criar imagens de exemplo simples usando Pygame
-Caso você não tenha imagens prontas, este script cria imagens básicas
 """
 
 import pygame

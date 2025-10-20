@@ -1,21 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Implementação do algoritmo A* para pathfinding
-Utiliza apenas arrays clássicos (acesso por índice)
-"""
-
 class PathFinder:
-    """Implementa algoritmo A* usando apenas arrays clássicos"""
-    
     def __init__(self, city):
-        """
-        Inicializa o pathfinder
-        :param city: Objeto City
-        """
         self.city = city
     
     def heuristic(self, pos1, pos2):
-        """Calcula distância Manhattan entre duas posições"""
         x1, y1 = pos1[0], pos1[1]
         x2, y2 = pos2[0], pos2[1]
         return abs(x1 - x2) + abs(y1 - y2)
@@ -41,12 +28,6 @@ class PathFinder:
         return neighbors
     
     def find_path(self, start, end):
-        """
-        Encontra caminho de start para end usando A*
-        :param start: [x, y] posição inicial
-        :param end: [x, y] posição final
-        :return: Lista de posições [x, y] do caminho, ou None se não encontrar
-        """
         
         # Verifica se start e end são válidos
         if not self.city.is_walkable(start[0], start[1]):
@@ -54,9 +35,9 @@ class PathFinder:
         if not self.city.is_walkable(end[0], end[1]):
             return None
         
-        # Arrays para A* (implementação manual sem usar estruturas avançadas)
-        open_list = []  # Nós a serem explorados
-        closed_list = []  # Nós já explorados
+        # Arrays para A* 
+        open_list = [] 
+        closed_list = [] 
         
         # Dicionários implementados como arrays de pares [key, value]
         g_score = []  # Custo do início até o nó

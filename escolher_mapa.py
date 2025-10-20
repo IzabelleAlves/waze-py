@@ -23,7 +23,6 @@ def listar_mapas():
     return sorted(mapas)
 
 def escolher_mapa():
-    """Permite escolher um mapa"""
     print("=" * 60)
     print("ESCOLHER MAPA PARA CARREGAR")
     print("=" * 60)
